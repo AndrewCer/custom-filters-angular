@@ -17,6 +17,14 @@
     <title>Title Here</title>
   </head>
   <body ng-controller='HomeController'>
+    <div ng-controller='ServiceController'>
+      <h1>Zen Wisdom Inc! (aka http.get with angular)</h1>
+      <!-- <p>Wisdom: <b>{{zenWis}}</b></p> -->
+      {{errors}}
+      <div ng-repeat='title in titles track by $index'>
+        {{title}}
+      </div>
+    </div>
     <h1>Kebab Some Text!</h1>
     <form ng-submit="KebabeBaby()" class="form-action">
         <div class="form-group col-md-3">
@@ -25,6 +33,5 @@
         </div>
     </form>
 {{"hey there" | kebab}}
-
   </body>
 </html>
